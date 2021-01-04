@@ -27,8 +27,9 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 //applying the js file to the child theme
 function child_files () {
-    wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', '1.0', true);
-    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    // *adding jQuery doesn't work anyway* -- wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', '1.0', true);
+    // * adding font-awesome doesn't work either* -- wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    
     wp_enqueue_script('custom-js', get_theme_file_uri('/js/custom.js'), '1.0', true);
 }
 
