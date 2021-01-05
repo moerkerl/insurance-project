@@ -1,28 +1,20 @@
 (function($) {
-
     class Account {
         constructor() {
             this.events();
-            
         }
-    
+
         events () {
             $("#send").on("click",  this.createAccountPost);
         }
-    
-    
-    
+
         //methods
         createAccountPost () {
             alert('You clicked "send"');
 
-
-            
             var newAccount = {
                 'title': 'Testtitel',
                 'status': 'publish',
-
-                //POST request on acf fields doesn't work yet
                 'fields': {
                     'name': 'Liam',
                     'mail': 'liams mail'
@@ -37,14 +29,9 @@
                 type: 'POST',
                 data: newAccount,
             });
-            
         }
-        
     }
-
     new Account()
-
-
 })(jQuery)
 
 
