@@ -37,16 +37,3 @@ function child_files () {
 
 add_action('wp_enqueue_scripts', 'child_files');
 
-
-
-//register acf fields to api 
-function acf_to_rest_api($response, $account, $request) {
-    if (!function_exists('get_fields')) return $response;
-
-    if (isset($account)) {
-        $acf = get_fields($account->id);
-        $response->data['acf'] = $acf;
-    }
-    return $response;
-}
-add_filter('rest_prepare_account', 'acf_to_rest_api', 10, 3);

@@ -23,7 +23,7 @@
                 'status': 'publish',
 
                 //POST request on acf fields doesn't work yet
-                'acf': {
+                'fields': {
                     'name': 'Liam',
                     'mail': 'liams mail'
                 }
